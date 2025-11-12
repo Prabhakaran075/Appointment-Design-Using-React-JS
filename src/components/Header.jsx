@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ({ onFindDoctorsClick }) => {
   return (
@@ -7,24 +8,9 @@ const Header = ({ onFindDoctorsClick }) => {
         <h1 className="text-2xl font-bold text-[#3A643B]">AMRUTAM</h1>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a
-            href="#"
-            className="text-black font-medium hover:text-[#3A643B] transition-colors"
-          >
-            Home
-          </a>
-          <button
-            onClick={onFindDoctorsClick}
-            className="text-black font-bold hover:text-[#3A643B] transition-colors"
-          >
-            Find Doctors
-          </button>
-          <a
-            href="#"
-            className="text-black font-medium hover:text-[#3A643B] transition-colors"
-          >
-            About Us
-          </a>
+          <Link to="/" className="text-black font-medium hover:text-[#3A643B]">Home</Link>
+          <Link to="/find" className="text-black font-bold hover:text-[#3A643B]">Find Doctors</Link>
+          <Link to="/about" className="text-black font-medium hover:text-[#3A643B]">About Us</Link>
         </nav>
 
         <div className="flex items-center space-x-2">
